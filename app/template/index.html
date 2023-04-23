@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Andrew Voice Assistant</title>
+	<style>
+		body {
+      background-image: url("{{url_for('static',filename='giphy1.gif')}}");
+      background-repeat: no-repeat;
+      background-size: cover;
+			background-color: black;
+    }
+		.btn {
+			border: 2px solid #fff;
+			border-radius: 50px;
+			background-color: rgb(72, 151, 72);
+			color: rgb(255, 255, 255);
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			letter-spacing: 0.1em;
+			font-size: 16px;
+			font-weight: 400;
+			transition: 0.5s;
+			margin: 4px 2px;
+		}
+
+		.btn:hover {
+				background: var(--clr);
+				color: white;
+				letter-spacing: 0.25em;
+				box-shadow:0 0 35px var(--clr);
+		}
+		
+		.btn:before{
+			content: '';
+			inset: 2px;
+			background: black; 
+		}
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			color: azure;
+			max-width: 500px;
+			margin: auto;
+			text-align: center;
+		}
+	
+		h1{
+			color: azure;
+			font-size: 50px;
+			font-style:normal;
+			margin-top: 0.2em;
+			text-align: center;
+		}	
+
+		 h1:hover{
+			-webkit-text-stroke: 2px #8b8ce8;
+			color: #1e9bff;
+			transition: 0.3s;
+		 }
+	</style>
+</head>
+<body>
+	<div class="center">
+		<div class="wrapper">
+			 <h1>ANDREW VOICE ASSISTANT</h1>
+			 <form action="{{ url_for('start') }}" method="POST">
+				<button type="submit" style="--clr:#1e9bff" class="btn" onclick="startAssistant()">START</button>
+			</form>
+		</div>
+	</div>
+	<script>
+		function startAssistant() {
+			 var xhr = new XMLHttpRequest();
+			 xhr.open("GET", "{{ url_for('start') }}", true);
+			 xhr.send();
+		}
+	</script>
+</body>
+</html>
