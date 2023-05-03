@@ -121,6 +121,8 @@ def handle_query(query):
         get_time(query)
     elif "what is the date" in query:
         get_date()
+    elif "what is your name" in query:
+        speak("My name is andrew, I am your virtual assistant") 
     elif "who are you" in query:
         speak("I am your virtual assistant, you can call me andrew")
     elif "open whatsapp" in query:
@@ -135,6 +137,9 @@ def handle_query(query):
     elif "open google" in query:
         webbrowser.open('https://www.google.com/')
         speak("Opening google")
+    elif "open github" in query:
+        webbrowser.open("https://github.com/Hy-per-ion/andrew-voice-assistant.git")
+        speak("Opening github")
     elif "what is the weather in" in query:
         match = re.search('what is the weather in (.+)', query)
         if match:
@@ -159,8 +164,6 @@ def handle_query(query):
         stop_music()
     elif "tell me a joke" in query:
         tell_joke()
-    elif "andrew mode" in query:
-        speak("what colour is your bugatti")
     elif "terminate" in query:
         speak("Goodbyee!")
         exit()
