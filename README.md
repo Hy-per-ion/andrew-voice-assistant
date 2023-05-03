@@ -13,3 +13,5 @@ pip install pyttsx3
 pip install flask
 
 pip install pywhatkit
+
+pip install pyaudio
