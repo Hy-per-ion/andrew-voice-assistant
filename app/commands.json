@@ -90,11 +90,6 @@
       "response": "",
       "fileName": ""
     },
-    "translate": {
-        "variations": ["translate"],
-        "response": "",
-      "fileName": ""
-    },
     "conversation": {
         "variations": ["let's have a conversation", "start a conversation", "let's talk", "talk with me"],
         "response": "",
