@@ -35,14 +35,12 @@ Andrew Voice Assistant is a Python program that uses speech recognition and text
 
 ##Install the required libraries using the following command:
 ```bash
-Copy code
 pip install speechrecognition pyttsx3 pywhatkit pyjokes requests opencv-python googletrans
 ```
 Usage
 
 ##Run the Python file using the following command:
 ```bash
-Copy code
 python run.py
 ```
 The assistant will greet you and wait for your command.
