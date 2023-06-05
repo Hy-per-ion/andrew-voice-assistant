@@ -1,3 +1,4 @@
+# diksha
 import datetime
 import speech_recognition as sr
 import pyttsx3
@@ -42,6 +43,8 @@ def recognize_speech():
             return "Sorry, I am not able to process your request"
 
 
+# amar
+
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if 0 <= hour < 12:
@@ -79,6 +82,28 @@ def get_date():
     engine.runAndWait()
 
 
+def search_web(que):
+    url = "https://www.google.com/search?q=" + que.replace(" ", "+")
+    webbrowser.open(url)
+
+
+def open_web(que):
+    url = "https://www." + que.replace(" ", "") + ".com/"
+    webbrowser.open(url)
+
+
+def tell_joke():
+    joke = pyjokes.get_joke()
+    speak(joke)
+
+
+def play_song(que):
+    speak("Playing " + que + " on YouTube.")
+    pywhatkit.playonyt(que)
+
+
+# prathit
+
 def get_weather(city):
     api_key = "f3ab91ce4b4309f3a6a17172fa7c3928"
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
@@ -96,21 +121,6 @@ def get_weather(city):
         return "Sorry, I could not find the weather information for that city."
 
 
-def search_web(que):
-    url = "https://www.google.com/search?q=" + que.replace(" ", "+")
-    webbrowser.open(url)
-
-
-def open_web(que):
-    url = "https://www." + que.replace(" ", "") + ".com/"
-    webbrowser.open(url)
-
-
-def play_song(que):
-    speak("Playing " + que + " on YouTube.")
-    pywhatkit.playonyt(que)
-
-
 def note():
     speak("What do you want to write on your note?")
     notes = recognize_speech()
@@ -119,11 +129,6 @@ def note():
     with open(f"{filename}.txt", 'w') as f:
         f.write(notes)
     speak(f"I created the note {filename}")
-
-
-def tell_joke():
-    joke = pyjokes.get_joke()
-    speak(joke)
 
 
 def take_pic():
@@ -147,6 +152,7 @@ def translate_to_english(txt, source_lang):
     return trans_text
 
 
+# kaushik
 def handle_query(que):
     matched_command = matching_command(que)
     if matched_command:
