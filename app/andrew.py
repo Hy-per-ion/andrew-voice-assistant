@@ -181,7 +181,7 @@ def handle_query(que):
             open_web(que)
         elif matched_command == "open_github":
             webbrowser.open("https://github.com/Hy-per-ion/andrew-voice-assistant.git")
-            speak("Opening GitHub")
+            speak("Opening my code")
         elif matched_command == "weather":
             match = re.search('what is the weather in (.+)', que)
             if match:
