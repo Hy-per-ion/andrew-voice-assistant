@@ -140,7 +140,7 @@ def take_pic():
     speak(f"Picture taken and saved as {filename}")
 
 
-def send_whatsapp_message(number, message, hour, minute, wait_time=5, print_wait=True, wait_in_seconds=2):
+def send_whatsapp_message(number, message, hour, minute, wait_time=8, print_wait=True, wait_in_seconds=2):
     pywhatkit.sendwhatmsg(number, message, hour, minute, wait_time, print_wait, wait_in_seconds)
     speak("WhatsApp message sent.")
 
@@ -153,19 +153,20 @@ def translate_to_english(txt, source_lang):
 
 
 # kaushik
+
 def handle_query(que):
     matched_command = matching_command(que)
     if matched_command:
         if matched_command == "greeting":
             speak(commands[matched_command]["response"])
-        elif matched_command == "time":
-            get_time(que)
-        elif matched_command == "date":
-            get_date()
         elif matched_command == "name":
             speak("My name is Andrew, I am your virtual assistant")
         elif matched_command == "identity":
             speak("I am your virtual assistant, you can call me Andrew")
+        elif matched_command == "time":
+            get_time(que)
+        elif matched_command == "date":
+            get_date()
         elif matched_command == "open_whatsapp":
             webbrowser.open("https://web.whatsapp.com/")
             speak("Opening WhatsApp")
@@ -294,6 +295,8 @@ def matching_command(user_input):
                 return command_name
     return None
 
+
+#chinmay
 
 def welcome():
     global already_welcomed
