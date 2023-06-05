@@ -1,0 +1,109 @@
+{
+  "commands": {
+    "greeting": {
+      "variations": ["hello", "hi", "hey"],
+      "response": "Hello! How can I assist you?",
+      "fileName": ""
+    },
+    "time": {
+      "variations": ["what is the time"],
+      "response": "",
+      "fileName": ""
+    },
+    "date": {
+      "variations": ["what is the date"],
+      "response": "",
+      "fileName": ""
+    },
+    "name": {
+      "variations": ["what is your name"],
+      "response": "",
+      "fileName": ""
+    },
+    "identity": {
+      "variations": ["who are you","what are you"],
+      "response": "",
+      "fileName": ""
+    },
+    "open_whatsapp": {
+      "variations": ["open whatsapp"],
+      "response": "",
+      "fileName": ""
+    },
+    "open_youtube": {
+      "variations": ["open youtube"],
+      "response": "",
+      "fileName": ""
+    },
+    "open_netflix": {
+      "variations": ["open netflix"],
+      "response": "",
+      "fileName": ""
+    },
+    "open_google": {
+      "variations": ["open google"],
+      "response": "",
+      "fileName": ""
+    },
+    "open_github": {
+      "variations": ["open github","show me your code","source code"],
+      "response": "",
+      "fileName": ""
+    },
+    "open": {
+      "variations": ["open prime video","open "],
+      "response": "",
+      "fileName": ""
+    },
+    "weather": {
+      "variations": ["what is the weather in"],
+      "response": "",
+      "fileName": ""
+    },
+    "search": {
+      "variations": ["search for"],
+      "response": "",
+      "fileName": ""
+    },
+    "play": {
+      "variations": ["play"],
+      "response": "",
+      "fileName": ""
+    },
+    "joke": {
+      "variations": ["tell me a joke"],
+      "response": "",
+      "fileName": ""
+    },
+    "note": {
+      "variations": ["make a note","take a note","note"],
+      "response": "",
+      "fileName": ""
+    },
+    "take_pic": {
+      "variations": ["take a pic","save these memories"],
+      "response": "",
+      "fileName": ""
+    },
+    "send_message": {
+      "variations": ["send message","send a whatsapp message"],
+      "response": "",
+      "fileName": ""
+    },
+    "translate": {
+        "variations": ["translate"],
+        "response": "",
+      "fileName": ""
+    },
+    "conversation": {
+        "variations": ["let's have a conversation", "start a conversation", "let's talk", "talk with me"],
+        "response": "",
+      "fileName": ""
+    },
+    "terminate": {
+      "variations": ["terminate", "exit", "end"],
+      "response": "",
+      "fileName": ""
+    }
+  }
+}
