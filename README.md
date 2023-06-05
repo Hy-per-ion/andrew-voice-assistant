@@ -1,9 +1,9 @@
-# Andrew Voice Assistant
+#  🤖 Andrew Voice Assistant  🤖 
 
 Andrew Voice Assistant is a Python program that uses speech recognition and text-to-speech technology to provide various functionalities and assist users with their daily tasks. The assistant can perform tasks such as telling the time, searching the web, playing music on YouTube, providing weather information, taking notes, and more.
 
 
-## Features
+##  ⚡️  Features  ⚡️ 
 
 - Greeting: The assistant greets the user based on the time of the day.
 - Time and Date: The assistant can tell the current time and date.
@@ -20,7 +20,7 @@ Andrew Voice Assistant is a Python program that uses speech recognition and text
 - Conversational Interaction: The assistant engages in a conversation with the user, asking about their favorite color, hobbies, movies, books, and more.
 - Termination: Users can ask the assistant to terminate the program.
 
-## Prerequisites
+## 💥Prerequisites☄️
 
 The following libraries need to be installed to run the program:
 
@@ -35,11 +35,11 @@ The following libraries need to be installed to run the program:
 - cv2
 - googletrans
 
-## Install the required libraries using the following command:
+## 📲Install the required libraries using the following command:
 ```bash
 pip install speechrecognition pyttsx3 pywhatkit pyjokes requests opencv-python googletrans
 ```
-## Usage
+## 📲Usage
 
 Run the Python file using the following command:
 ```bash
@@ -53,7 +53,7 @@ The assistant will process your command and provide a response or perform the re
 
 Continue interacting with the assistant by speaking your commands or questions.
 
-## Customization
+## 📟Customization📟
 The assistant's functionalities and responses can be customized by modifying the commands.json file. The file contains a list of commands and their variations, along with corresponding responses. You can add, remove, or modify commands as per your requirements.
 
 To customize the assistant's responses, you can modify the handle_query function in the code. This function maps user commands to specific actions or responses.
