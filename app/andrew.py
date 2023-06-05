@@ -1,5 +1,8 @@
 # diksha
 import datetime
+import os
+import signal
+
 import speech_recognition as sr
 import pyttsx3
 import webbrowser
@@ -9,7 +12,6 @@ import pyjokes
 import requests
 import json
 import cv2
-from googletrans import Translator
 
 r = sr.Recognizer()
 engine = pyttsx3.init()
@@ -22,7 +24,7 @@ def load_commands(file_path):
     return data["commands"]
 
 
-commands = load_commands("commands.json")
+commands = load_commands("app/commands.json")
 
 
 def speak(text):
@@ -41,6 +43,10 @@ def recognize_speech():
             return "Sorry, I didn't understand that"
         except sr.RequestError:
             return "Sorry, I am not able to process your request"
+
+
+def terminate():
+    os.kill(os.getpid(), signal.SIGTERM)
 
 
 # amar
@@ -145,13 +151,6 @@ def send_whatsapp_message(number, message, hour, minute, wait_time=8, print_wait
     speak("WhatsApp message sent.")
 
 
-def translate_to_english(txt, source_lang):
-    translator = Translator()
-    translation = translator.translate(txt, src=source_lang, dest='en')
-    trans_text = translation.text
-    return trans_text
-
-
 # kaushik
 def handle_query(que):
     matched_command = matching_command(que)
@@ -208,13 +207,6 @@ def handle_query(que):
             note()
         elif matched_command == "take_pic":
             take_pic()
-        elif matched_command == "translate":
-            speak("What is the language code")
-            lan = recognize_speech().lower()
-            speak("Say the text")
-            text = recognize_speech().lower()
-            translated_text = translate_to_english(text, lan)
-            speak(translated_text)
         elif matched_command == "send_message":
             speak("Please provide the recipient's phone number.")
             number = input("Enter the phone number with the country code: ")
